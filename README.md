@@ -1,13 +1,13 @@
 # Проект "Wonderful_Ball"
  
-Сайт игрушек мамы
+- Сайт игрушек мамы
 
 ## Участники
 
-Randacel - DevOps
-Orwite - Fullstack Developer
+- Randacel - DevOps
+- Orwite - Fullstack Developer
 
 ## Ветки 
 
-main - Основная для готового кода
-dev - Разработка
+- main - Основная для готового кода
+- dev - Разработка
