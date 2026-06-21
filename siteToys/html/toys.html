@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игрушки — Вязаный Мир</title>
+
+    <!-- Шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="../css/toys.css">
+   
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img class="header-logo" src="../img/logo.png" alt="">
+                Вязаный Мир
+            </a>
+            <nav class="nav">
+                <a href="#toys">Игрушки</a>
+                <a href="#courses">Курсы</a>
+                <a href="#about">О нас</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🧸 Игрушки ручной работы</h1>
+            <p>Тёплые и уникальные вязаные игрушки для вас и ваших близких</p>
+        </div>
+    </section>
+
+    <!-- ===== ОСНОВНАЯ СЕТКА ===== -->
+    <div class="container">
+        <!-- Кнопка для мобильных -->
+        <div class="filter-trigger">
+            <button id="filterToggleBtn"><i class="fas fa-sliders-h"></i> Фильтры</button>
+        </div>
+
+        <div class="toys-layout">
+            <!-- SIDEBAR (десктоп) -->
+            <aside class="filters-sidebar" id="desktopFilters">
+                <h3><i class="fas fa-sliders-h"></i> Фильтры</h3>
+
+                <div class="filter-group">
+                    <label for="searchDesktop">Поиск</label>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchDesktop" placeholder="Найти игрушку..." />
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="size">Размер</label>
+                    <select id="size">
+                        <option value="">Любой</option>
+                        <option value="small">Маленькая (до 15 см)</option>
+                        <option value="medium">Средняя (15–30 см)</option>
+                        <option value="large">Большая (от 30 см)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="color">Цвет</label>
+                    <select id="color">
+                        <option value="">Любой</option>
+                        <option value="beige">Бежевый</option>
+                        <option value="brown">Коричневый</option>
+                        <option value="gray">Серый</option>
+                        <option value="multicolor">Разноцветный</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="animal">Тип животного</label>
+                    <select id="animal">
+                        <option value="">Все</option>
+                        <option value="bear">Мишки</option>
+                        <option value="bunny">Зайцы</option>
+                        <option value="fox">Лисы</option>
+                        <option value="dragon">Драконы</option>
+                        <option value="other">Другие</option>
+                    </select>
+                </div>
+
+                <button class="btn-reset-sidebar" type="button"><i class="fas fa-undo-alt"></i> Сбросить</button>
+            </aside>
+
+            <!-- КАРТОЧКИ ИГРУШЕК -->
+            <section class="cards-grid">
+                <!-- Игрушка 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1589770168914-27c9af285ca7?w=400&auto=format&fit=crop&q=80" alt="Мишка Тедди" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Хит</span>
+                        <h3>Мишка Тедди</h3>
+                        <p>Классический вязаный мишка с шарфиком. Рост 30 см.</p>
+                        <div class="price">2 490 ₽ <small>/ шт</small></div>
+                    </div>
+                </article>
+
+                <!-- Игрушка 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=400&auto=format&fit=crop&q=80" alt="Зайка с морковкой" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Новинка</span>
+                        <h3>Зайка с морковкой</h3>
+                        <p>Очаровательный зайка в комбинезоне. Рост 28 см.</p>
+                        <div class="price">2 790 ₽ <small>/ шт</small></div>
+                    </div>
+                </article>
+
+                <!-- Игрушка 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1545243429-b50c12e9b4a0?w=400&auto=format&fit=crop&q=80" alt="Лисёнок" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Популярное</span>
+                        <h3>Лисёнок</h3>
+                        <p>Рыжий лис с пушистым хвостом. Рост 25 см.</p>
+                        <div class="price">2 350 ₽ <small>/ шт</small></div>
+                    </div>
+                </article>
+
+                <!-- Игрушка 4 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1578922747544-728c9c52bd0b?w=400&auto=format&fit=crop&q=80" alt="Дракоша" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Редкость</span>
+                        <h3>Дракоша</h3>
+                        <p>Добрый дракон с крыльями. Рост 32 см.</p>
+                        <div class="price">3 190 ₽ <small>/ шт</small></div>
+                    </div>
+                </article>
+
+                <!-- Игрушка 5 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1589770168914-27c9af285ca7?w=400&auto=format&fit=crop&q=80" alt="Панда" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Для малышей</span>
+                        <h3>Панда</h3>
+                        <p>Мягкая панда с бамбуком. Рост 26 см.</p>
+                        <div class="price">2 650 ₽ <small>/ шт</small></div>
+                    </div>
+                </article>
+
+                <!-- Игрушка 6 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=400&auto=format&fit=crop&q=80" alt="Кролик" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">Пасхальный</span>
+                        <h3>Кролик с корзинкой</h3>
+                        <p>Милый кролик с пасхальной корзинкой. Рост 24 см.</p>
+                        <div class="price">2 890 ₽ <small>/ шт</small></div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+
+    <!-- ===== MOBILE FILTER OVERLAY & DRAWER ===== -->
+    <div class="filter-overlay" id="filterOverlay"></div>
+    <div class="filter-drawer" id="filterDrawer">
+        <div class="drawer-header">
+            <h3>Фильтры</h3>
+            <button id="closeDrawerBtn">&times;</button>
+        </div>
+
+        <div class="filter-group">
+            <label for="searchMobile">Поиск</label>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchMobile" placeholder="Найти игрушку..." />
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <label for="sizeMobile">Размер</label>
+            <select id="sizeMobile">
+                <option value="">Любой</option>
+                <option value="small">Маленькая (до 15 см)</option>
+                <option value="medium">Средняя (15–30 см)</option>
+                <option value="large">Большая (от 30 см)</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="colorMobile">Цвет</label>
+            <select id="colorMobile">
+                <option value="">Любой</option>
+                <option value="beige">Бежевый</option>
+                <option value="brown">Коричневый</option>
+                <option value="gray">Серый</option>
+                <option value="multicolor">Разноцветный</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="animalMobile">Тип животного</label>
+            <select id="animalMobile">
+                <option value="">Все</option>
+                <option value="bear">Мишки</option>
+                <option value="bunny">Зайцы</option>
+                <option value="fox">Лисы</option>
+                <option value="dragon">Драконы</option>
+                <option value="other">Другие</option>
+            </select>
+        </div>
+
+        <button class="btn-reset-sidebar" type="button"><i class="fas fa-undo-alt"></i> Сбросить</button>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-yarn"></i>
+                    Вязаный Мир
+                </div>
+                <p>Вязаные игрушки ручной работы и авторские курсы по вязанию. Создаём уют с 2018 года.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Каталог</h4>
+                <ul>
+                    <li><a href="#">Игрушки</a></li>
+                    <li><a href="#">Курсы</a></li>
+                    <li><a href="#">Схемы</a></li>
+                    <li><a href="#">Наборы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="#">Мастерицы</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Помощь</h4>
+                <ul>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Вязаный Мир. Все права защищены.</span>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            const overlay = document.getElementById('filterOverlay');
+            const drawer = document.getElementById('filterDrawer');
+            const openBtn = document.getElementById('filterToggleBtn');
+            const closeBtn = document.getElementById('closeDrawerBtn');
+
+            function openFilters() {
+                overlay.classList.add('active');
+                drawer.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeFilters() {
+                overlay.classList.remove('active');
+                drawer.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            openBtn.addEventListener('click', openFilters);
+            closeBtn.addEventListener('click', closeFilters);
+            overlay.addEventListener('click', closeFilters);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && drawer.classList.contains('open')) {
+                    closeFilters();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
