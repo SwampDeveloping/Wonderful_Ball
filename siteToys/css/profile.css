@@ -44,8 +44,8 @@
             z-index: 100;
             padding: 16px 0;
         }
-
-        .header-logo{
+        
+        .header-logo {
             max-width: 40px;
             max-height: 40px;
         }
@@ -181,7 +181,7 @@
             width: 100%;
             object-fit: cover;
             height: 100%;
-            max-height: 400px;
+            max-height: 450px;
         }
 
         /* ===== MISSION ===== */
@@ -217,18 +217,18 @@
             font-size: 16px;
         }
 
-        /* ===== ADVANTAGES ===== */
-        .advantages-section {
+        /* ===== VALUES ===== */
+        .values-section {
             padding: 50px 0;
         }
 
-        .advantages-grid {
+        .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
         }
 
-        .advantage-item {
+        .value-item {
             background: #ffffff;
             padding: 30px 20px;
             border-radius: 24px;
@@ -237,74 +237,77 @@
             transition: transform 0.25s;
         }
 
-        .advantage-item:hover {
+        .value-item:hover {
             transform: translateY(-4px);
         }
 
-        .advantage-item i {
+        .value-item i {
             font-size: 40px;
             color: #d4a373;
             margin-bottom: 12px;
         }
 
-        .advantage-item h3 {
+        .value-item h3 {
             font-size: 18px;
             font-weight: 600;
             color: #3d322a;
             margin-bottom: 6px;
         }
 
-        .advantage-item p {
+        .value-item p {
             font-size: 14px;
             color: #6b5e52;
         }
 
-        /* ===== TEAM ===== */
-        .team-section {
+        /* ===== JOURNEY TIMELINE ===== */
+        .journey-section {
             padding: 50px 0;
             background: #fdf6f0;
         }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .team-card {
-            background: #ffffff;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            transition: transform 0.25s;
-        }
-
-        .team-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .team-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .team-card .info {
-            padding: 20px 18px 24px;
-            text-align: center;
-        }
-
-        .team-card .info h3 {
-            font-size: 18px;
-            font-weight: 600;
+        .journey-section h2 {
+            font-size: 28px;
+            font-weight: 700;
             color: #3d322a;
+            text-align: center;
+            margin-bottom: 8px;
         }
 
-        .team-card .info p {
-            font-size: 14px;
+        .journey-section .subtitle {
+            text-align: center;
             color: #6b5e52;
-            margin-top: 4px;
+            margin-bottom: 36px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: #ffffff;
+            padding: 20px 24px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .timeline-item .year {
+            font-size: 20px;
+            font-weight: 700;
+            color: #d4a373;
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+
+        .timeline-item .desc p {
+            color: #5e5146;
+            font-size: 15px;
         }
 
         /* ===== FOOTER ===== */
@@ -398,7 +401,7 @@
             }
 
             .about-image img {
-                max-height: 300px;
+                max-height: 350px;
             }
 
             .footer .container {
@@ -426,13 +429,18 @@
                 font-size: 20px;
             }
 
-            .advantages-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .team-grid {
+            .values-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 16px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .timeline-item .year {
+                min-width: auto;
             }
 
             .footer .container {
@@ -448,11 +456,7 @@
         }
 
         @media (max-width: 420px) {
-            .advantages-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .team-grid {
+            .values-grid {
                 grid-template-columns: 1fr;
             }
         }
