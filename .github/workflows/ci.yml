@@ -16,7 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check project files
+      - name: Check required files
         run: |
-          echo "Project files:"
-          find siteToys -type f
+         test -f siteToys/html/index.html
+         test -f siteToys/css/style.css
+         test -f siteToys/img/logo.png
+         echo "Required files exist"
