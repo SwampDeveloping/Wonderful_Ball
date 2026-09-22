@@ -21,4 +21,5 @@ jobs:
          test -f siteToys/html/index.html
          test -f siteToys/css/style.css
          test -f siteToys/img/logo.png
+         test -f siteToys/ing/does-not-exist.png
          echo "Required files exist"
